@@ -3,6 +3,7 @@ package facades;
 import dtos.EmployeeDTO;
 import entities.Employee;
 
+import java.math.BigDecimal;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -79,6 +80,13 @@ public class EmployeeFacade
         emf = EMF_Creator.createEntityManagerFactory();
         EmployeeFacade fe = getEmployeeFacadeInstance(emf);
         fe.getAll().forEach(dto->System.out.println(dto));
+    }
+
+    public void populate()
+    {
+        create(new EmployeeDTO(new Employee("xa12tt", "Kurt", "Wonnegut", new BigDecimal(335567))));
+        create(new EmployeeDTO(new Employee("hyu654", "Hanne", "Olsen", new BigDecimal(435867))));
+        create(new EmployeeDTO(new Employee("uio876", "Jan", "Olsen", new BigDecimal(411567))));
     }
 
 }
