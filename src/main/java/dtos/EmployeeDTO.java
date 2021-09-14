@@ -11,10 +11,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author tha
- */
 public class EmployeeDTO
 {
     private String id;
